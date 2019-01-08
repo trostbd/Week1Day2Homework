@@ -18,9 +18,9 @@ public class Week1Day2Homework
         dupList.add("recover");
         dupList.add("index");
         dupList.add("vehicle");
-        //System.out.println("Problem One: \n");
-       // homework.findDuplicates(dupList);
-        System.out.println("Problem Two: \n");
+        System.out.println("Problem One: \n");
+        homework.findDuplicates(dupList);
+        System.out.println("\n Problem Two: \n");
         System.out.println("racecar is " + homework.checkPalindrome("racecar"));
         System.out.println("traffic is " + homework.checkPalindrome("traffic"));
         System.out.println("\n Problem Three: ");
@@ -33,18 +33,19 @@ public class Week1Day2Homework
 
     }
 
-   /* public void findDuplicates(ArrayList<String> strings)
+    public void findDuplicates(ArrayList<String> strings)
     {
         ArrayList<String> duplicates = new ArrayList<String>();
         for(int currWordPos = 0; currWordPos < strings.size(); currWordPos++)
         {
+            String currWord = strings.get(currWordPos);
             for(int currTestPos = currWordPos +1; currTestPos < strings.size();currTestPos++)
-                if(strings[currWordPos].equals(strings[currTestPos]))
+                if(strings.get(currWordPos).equals(strings.get(currTestPos)))
                     duplicates.add((currWord));
         }
         for(int i = 0; i < duplicates.size();i++)
             System.out.println(duplicates.get(i));
-    }*/
+    }
 
     public boolean checkPalindrome(String word)
     {
